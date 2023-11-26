@@ -1,6 +1,6 @@
 # internal/services/user.py
 from sqlalchemy.orm import Session
-from internal.models.user import User
+from internal.core.models.user import User
 
 
 class UserService:
@@ -13,3 +13,6 @@ class UserService:
         db.commit()
         db.refresh(db_user)
         return db_user
+
+
+user_service = UserService()  # Создаем экземпляр UserService

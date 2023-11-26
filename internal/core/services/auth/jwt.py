@@ -3,7 +3,7 @@ from jose import JWTError, jwt
 from datetime import datetime, timedelta
 from fastapi import HTTPException, Depends, status
 from fastapi.security import OAuth2PasswordBearer
-from internal.services.user import UserService
+from internal.core.services.user import UserService
 from internal.database import SessionLocal
 from internal.config import settings
 
